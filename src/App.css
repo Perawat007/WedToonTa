@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.home,
+.reports,
+.products,
+.team,
+.reports {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
 .App {
   text-align: center;
 }
@@ -15,6 +36,8 @@
 
 .App-header {
   background-color: #282c34;
+  width: 100%;
+  height: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,7 +55,43 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+.Home-container {
+  background-color: #7110af;
+  overflow-x: hidden; 
+  touch-action: pan-y; 
+}
+
+/*
+@media screen and (min-width: 428px) {
+  .Home-container {
+    user-select: none;
+    touch-action: none;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .Home-container {
+    user-select: none;
+    touch-action: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .Home-container {
+    user-select: none;
+    touch-action: none;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .Home-container {
+    user-select: none;
+    touch-action: none;
+  }
+}*/
