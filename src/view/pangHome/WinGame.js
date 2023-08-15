@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from '../../api/axios';
 import '../pangHome/test.css';
+import '../../view/SeeGame/ListGame.css'
 import Slider from "react-slick";
-
+import { Box, Container } from '@mui/material';
 import "react-multi-carousel/lib/styles.css";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-
-import styledGront from 'styled-components'
+import Typography from '@mui/material/Typography';
+import cartoon from "../../img/1.png";
 function WinGame() {
     const token = localStorage.getItem("token");
     const [progressWidth, setProgressWidth] = useState(20);
@@ -34,82 +35,82 @@ function WinGame() {
     const specialgame = [
         {
             id: 1, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', alt: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-13.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-13.png',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
         },
         {
             id: 2, name: 'Honey Trap of Diao Chan', provider_name: 'diaochan', data_gameid: 'PGSOFT2', alt: 'Honey Trap of Diao Chan',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-1.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-1.png',
             link: '',
         },
         {
             id: 3, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', alt: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-15.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-15.png',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
             id: 4, name: 'Ocean Lord', provider_name: '1001', data_gameid: 'ASKMEBET', alt: 'Ocean Lord',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-12.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-12.png',
             link: '',
         },
         {
             id: 5, name: 'Golden Zuma', provider_name: '4004', data_gameid: 'ASKMEBET', alt: 'Golden Zuma',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-11.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-11.png',
             link: '',
         },
         {
             id: 6, name: 'Jump & Jump', provider_name: '4005', data_gameid: 'ASKMEBET', alt: 'Jump & Jump',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-3.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-3_1.png',
             link: '',
         },
         {
             id: 7, name: "Let's Shoot", provider_name: '1002', data_gameid: 'ASKMEBET', alt: "Let's Shoot",
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-4.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-4.png',
             link: '',
         },
         {
             id: 8, name: 'Plants vs. Dinos', provider_name: '1007', data_gameid: 'ASKMEBET', alt: 'Plants vs. Dinos',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-10.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-10.png',
             link: '',
         },
         {
             id: 9, name: 'Football Strike', provider_name: '602813', data_gameid: 'FUNKY', alt: 'Football Strike',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-9.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-9.png',
             link: '',
         },
         {
             id: 10, name: 'CowBoys VS Aliens', provider_name: 'CowBoys VS Aliens', data_gameid: 'CowBoys VS Aliens', alt: 'CowBoys VS Aliens',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-14.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-14.png',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_CowboyVSAlien/index.html',
         },
         {
             id: 11, name: "Fortune Mouse", provider_name: 'fortune-mouse', data_gameid: 'PGSOFT2', alt: "Fortune Mouse",
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-6.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-6.png',
             link: '',
         },
         {
             id: 12, name: 'Bounty BallOon', provider_name: 'Bounty BallOon', data_gameid: 'Bounty BallOon', alt: 'Bounty BallOon',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-16.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-16.png',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_BountyBalloon/index.html',
         },
         {
             id: 13, name: 'Lucky Neko', provider_name: 'lucky-neko', data_gameid: 'PGSOFT2', alt: 'Lucky Neko',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-5.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-5.png',
             link: '',
         },
         {
             id: 14, name: 'The Great IceScape', provider_name: 'the-great-icescape', data_gameid: 'PGSOFT2', alt: 'the-great-icescape',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-7.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-7.png',
             link: '',
         },
         {
             id: 15, name: 'Sweet Bonanza', provider_name: 'vs20fruitsw', data_gameid: 'EGAMES', alt: 'Sweet Bonanza',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-8.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-8.png',
             link: '',
         },
         {
             id: 16, name: 'Win Win Won', provider_name: 'Win Win Won', data_gameid: 'Win Win Won', alt: 'Win Win Won',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/Top10Game/top_game/G-2.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/G-2.png',
             link: '',
         },
     ]
@@ -231,10 +232,10 @@ function WinGame() {
             id: 18, name: 'UPG Slot', provider_name: 'UPG', data_gameid: 'UPG', data_name: 'UPG', alt: 'UPG',
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/18.png'
         },
-        {
+        /*{
             id: 19, name: 'JoKer', provider_name: 'PP', data_gameid: '218', data_name: 'JoKer', alt: 'JoKer',
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/19.png'
-        },
+        },*/
         {
             id: 20, name: 'Ameba', provider_name: 'AMEBA', data_gameid: 'AMEBA', data_name: 'AMEBA', alt: 'AMEBA',
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/20.png'
@@ -275,10 +276,10 @@ function WinGame() {
             id: 29, name: 'Spinix', provider_name: 'SPINIX', data_gameid: 'SPINIX', data_name: 'SPINIX', alt: 'SPINIX',
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/29.png'
         },
-        {
-            id: 30, name: 'Ninja slot', provider_name: 'NINJA', data_gameid: 'NINJA', data_name: 'NINJA', alt: 'NINJA',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/30.png'
-        },
+        /* {
+             id: 30, name: 'Ninja slot', provider_name: 'NINJA', data_gameid: 'NINJA', data_name: 'NINJA', alt: 'NINJA',
+             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/30.png'
+         },*/
         {
             id: 31, name: '918 Kiss', provider_name: '918KISS', data_gameid: '918KISS', data_name: '918KISS', alt: '918KISS',
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/31.png'
@@ -355,10 +356,12 @@ function WinGame() {
     const settings = {
         className: "center",
         centerPadding: "100px",
+        infinite: true,
         slidesToShow: 3,
-        rows: 2,
+        rows: 5,
         speed: 100,
-        slidesPerRow: 2,
+        // slidesPerRow: 2,
+        swipeToSlide: true,
         nextArrow: <NextIcon />,
         prevArrow: <PrevIcon />,
         afterChange: (index) => {
@@ -391,9 +394,10 @@ function WinGame() {
                 settings: {
                     slidesToShow: 2,
                     slidesPerRow: 1,
+                    rows: 2,
                     centerMode: true,
                     speed: 1000,
-                    centerPadding: "690px",
+                    centerPadding: "610px",
                 },
             },
             {
@@ -401,9 +405,10 @@ function WinGame() {
                 settings: {
                     slidesToShow: 1,
                     slidesPerRow: 2,
+                    rows: 2,
                     centerMode: true,
                     speed: 500,
-                    centerPadding: "680px",
+                    centerPadding: "580px",
                 },
             },
             {
@@ -412,8 +417,9 @@ function WinGame() {
                     slidesToShow: 1,
                     slidesPerRow: 2,
                     centerMode: true,
+                    swipeToSlide: true,
                     speed: 500,
-                    centerPadding: "680px",
+                    centerPadding: "580px",
                 },
             },
             {
@@ -438,7 +444,7 @@ function WinGame() {
             },
         ],
     };
-
+/*
     const settingsgeat = {
         className: "center",
         centerPadding: "100px",
@@ -514,7 +520,7 @@ function WinGame() {
             },
         ],
     };
-
+*/
     const settingLive = {
         className: "center",
         centerPadding: "60px",
@@ -659,7 +665,7 @@ function WinGame() {
                     slidesPerRow: 1,
                     centerMode: true,
                     speed: 500,
-                    centerPadding: "680px",
+                    centerPadding: "600px",
                 },
             },
             {
@@ -677,34 +683,42 @@ function WinGame() {
 
     return (
         <>
-            <div className="popular-game features-game posRel mgt45">
-                <div className="v-exclusive game mgt25">
+        {/*  <div className="popular-game features-game posRel mgt45">
+                <div className="v-exclusive  game vGameList mgt45">
                     <div className="list">
                         <Slider {...settingsgeat}>
                             {specialgame.map((row) => (
-                                <div key={row.id}>
+                                <div key={row.name} className="box">
                                     <div className="boxGame">
-                                        <div className="box shadowImage">
-                                            <div className="image lazy"
-                                                role="img" alt="" style={{
-                                                    backgroundImage: `url(${row.img})`,
-                                                }}></div>
-
-                                            <div className="provider-name">{row.name}</div>
-                                            <div className="box-play">
-                                                <div className="button-play boxGoPlay" data-gameid={row.id} data-name={row.name}
-                                                    data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link)}>เข้าดูเกม</div>
-                                            </div>
+                                        <div className="card-image"
+                                            role="img" alt="" style={{
+                                                backgroundImage: `url(${row.img})`,
+                                                transform: "scale(1)"
+                                            }}>
                                         </div>
+                                        <img className='shadowImage' src={row.img} alt='' style={{
+                                            cursor: 'pointer',
+                                            transform: "scale(1)"
+                                        }} />
+                                    </div>
+
+                                    <span className="name">
+                                        <span>{row.name}</span>
+                                    </span>
+                                    <div className="provider-name">{row.name}</div>
+                                    <div className="box-play">
+                                        <div className="button-play boxGoPlay" data-gameid={row.providerCode} data-name={row.name}
+                                            data-pid="191" >เล่น</div>
                                     </div>
                                 </div>
                             ))}
                         </Slider>
                     </div>
                 </div>
-            </div>
-
+            </div>*/}
+          
             <div className="popular-game features-game posRel mgt45">
+            <div className="vp-title testdataV addfont displaycamp">ค่ายเกมทั้งหมด</div>
                 <div className="v-exclusive game mgt25">
                     <div className="list">
                         <Slider {...settings}>
@@ -727,71 +741,6 @@ function WinGame() {
                                 </div>
                             ))}
                         </Slider>
-                    </div>
-                </div>
-            </div>
-
-            <div className="popular-game features-game posRel mgt45">
-                <div className="testdata addfont d-dev">LIVE CASINO</div>
-                <div className="v-exclusive game mgt25">
-                    <div className="list">
-                        <div className='holderA'>
-                            <div className='holder_1'>
-                                <Slider {...settingLive}>
-                                    {LiveCasino.map((row) => (
-                                        <div key={row.id}>
-                                            <div className="boxGame">
-                                                <div className="box shadowImage">
-                                                    <div className="image lazy"
-                                                        role="img" alt="" style={{
-                                                            backgroundImage: `url(${row.img})`,
-                                                        }}></div>
-
-                                                    <div className="provider-name">{row.name}</div>
-                                                    <div className="box-play">
-                                                        <div className="button-play boxGoPlay" data-gameid={row.id} data-name={row.name}
-                                                            data-pid="191" onClick={() => SeeGameCamp(row.data_gameid)}>เข้าดูเกม</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </Slider>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="popular-game features-game posRel mgt45">
-                <div className="testdata addfont ">TRADING</div>
-                <div className="v-exclusive game mgt25">
-                    <div className="list">
-                        <div className='holderA'>
-                            <div className='holder_1'>
-                                <Slider {...settingTrading}>
-                                    {trading.map((row) => (
-                                        <div key={row.id}>
-                                            <div className="boxGame">
-                                                <div className="box shadowImage">
-                                                    <div className="image lazy"
-                                                        data-src="https://siam855-pub.s3.ap-southeast-1.amazonaws.com/frontend/web/Online-Casino-Live-Game-Sexy-Baccarat-Classic-New-Siam855-Thailand.jpg?v=27"
-                                                        role="img" alt="" style={{
-                                                            backgroundImage: `url(${row.img})`,
-                                                        }}></div>
-
-                                                    <div className="provider-name">{row.name}</div>
-                                                    <div className="box-play">
-                                                        <div className="button-play boxGoPlay" data-gameid={row.id} data-name={row.name}
-                                                            data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid)}>เล่น</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </Slider>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -826,7 +775,7 @@ const NextIcon = ({ onClick }) => {
     );
 };
 
-
+/*
 const PrevIconV = ({ onClick }) => {
     return (
         <div>
@@ -843,7 +792,7 @@ const PrevIconV = ({ onClick }) => {
         </div>
     );
 };
-
+*/
 const NextIconV = ({ onClick }) => {
     return (
         <div className="exclusive-nextTs">

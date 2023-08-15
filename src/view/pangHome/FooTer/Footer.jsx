@@ -132,15 +132,16 @@ const Footer = () => {
             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
               <h4
                 className="text-uppercase mb-4 font-weight-bold font"
-                style={{ color: "#00BFFF"}}
+                style={{ color: "#00BFFF" }}
               >
-                เว็บแทงบอล บาคาร่า สล็อต
+                เว็บเกมออนไลน์อันดับ 1
               </h4>
               <h5 className="font">
-                Toonta รวบรวมไว้อย่างครบครัน sbobet nova88
-                ผู้นำด้านเว็บแทงบอลอย่างแท้จริง อีกทั้งบาคาร่าออนไลน์ 20 ค่ายดัง
-                นำโดย เซ็กซี่บาคาร่า และสล็อตออนไลน์อีกว่า 10000 เกมส์ นำโดย pg
-                slot และอื่นๆอีกมากมาย
+                Toonta ผู้นำด้านเกมครบวงจร
+                เรารวบรวมเกมไว้อย่างครบครัน
+                ทั้งเกมสล็อต ยิงปลา ฯลฯ นำโดย
+                PG slot Dogzilla และค่ายเกมชั้นนำ
+                ซึ่งรวมเกมอีกกว่า 10,000 เกม
               </h5>
             </div>
 
@@ -159,42 +160,56 @@ const Footer = () => {
                   className="btn btn-sm btn-primary m-1 font"
                   style={{ backgroundColor: "#0000CD", color: "#FFFFFF" }}
                 >
-                  บาคาร่า
+                  PGSLOT
                 </a>
                 <a
                   href="/"
                   className="btn btn-sm btn-primary m-1 font"
                   style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
                 >
-                  คาสิโนออนไลน์
+                  พีจี
                 </a>
                 <a
                   href="/"
                   className="btn btn-sm btn-primary m-1 font"
                   style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
                 >
-                  บาคาร่าออนไลน์
+                  สล็อต
                 </a>
                 <a
                   href="/"
                   className="btn btn-sm btn-primary m-1 font"
                   style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
                 >
-                  casino
+                  Dogzilla
                 </a>
                 <a
                   href="/"
                   className="btn btn-sm btn-primary m-1 font"
                   style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
                 >
-                  ป๊อกเด้ง
+                  AMB
                 </a>
                 <a
                   href="/"
                   className="btn btn-sm btn-primary m-1 font"
                   style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
                 >
-                  เสือ มังกร
+                  ยิงปลา
+                </a>
+                <a
+                  href="/"
+                  className="btn btn-sm btn-primary m-1 font"
+                  style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
+                >
+                  เกมไพ่
+                </a>
+                <a
+                  href="/"
+                  className="btn btn-sm btn-primary m-1 font"
+                  style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
+                >
+                  SAgaming
                 </a>
                 <a
                   href="/"
@@ -208,36 +223,20 @@ const Footer = () => {
                   className="btn btn-sm btn-primary m-1 font"
                   style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
                 >
-                  wm casino
+                  casino
                 </a>
                 <a
                   href="/"
                   className="btn btn-sm btn-primary m-1 font"
                   style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
                 >
-                  sexy gaming
-                </a>
-                <a
-                  href="/"
-                  className="btn btn-sm btn-primary m-1 font"
-                  style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
-                >
-                  dg casino
-                </a>
-                <a
-                  href="/"
-                  className="btn btn-sm btn-primary m-1 font"
-                  style={{ backgroundColor: "#0000CD ", color: "#FFFFFF" }}
-                >
-                  allbet
+                  online
                 </a>
               </div>
             </div>
-
             <hr className="w-100 clearfix d-md-none" />
 
-            <hr className="w-100 clearfix d-md-none" />
-
+            {/* <hr className="w-100 clearfix d-md-none" /> 
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
               <h5
                 className="text-uppercase mb-4 font-weight-bold"
@@ -263,8 +262,7 @@ const Footer = () => {
                   </i>
                 </div>
               ))}
-            </div>
-
+            </div>*/}
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
               <h5
                 className="text-uppercase mb-4 font-weight-bold"

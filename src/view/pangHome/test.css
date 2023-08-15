@@ -93,6 +93,16 @@ img {
     right: 5px;
 }
 
+.imgGame {
+    z-index: 100;
+    scale: 98%;
+    cursor: pointer;
+}
+
+.imgGamepromo {
+    height: 82px;
+}
+
 /*ComPetTive*/
 
 @font-face {
@@ -102,6 +112,7 @@ img {
 
 .addfont {
     font-family: Mitr;
+    pointer-events: none;
 }
 
 .ComPetTiveGame {
@@ -246,6 +257,10 @@ img {
     .exclusive-prevTs {
         transform: translate(-200px, 0px);
     }
+
+    .displaycamp {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 390px) {
@@ -285,15 +300,21 @@ img {
         z-index: 1000;
         top: 3220px;
     }
+
+    .displaycamp {
+        display: none;
+    }
 }
 
-@media screen and (max-height: 926px){
+@media screen and (max-height: 926px) {
     .exclusive-nextTs {
-        transform: translate(-670px, 12px);
+        transform: translate(-580px, 12px);
     }
+
     .exclusive-prevTs {
-        transform: translate(-660px, 12px);
+        transform: translate(-570px, 12px);
     }
+
     .testdata {
         font-size: 20px;
         transform: translate(39%, 50%);
@@ -304,4 +325,10 @@ img {
         transform: translate(39%, 0%);
     }
 }
-    
+
+@media only screen and (max-width: 390px) and (max-height: 844px) {
+    .imgGamepromo {
+        height: 100px;
+        width: 240px;
+    }
+}

@@ -4,7 +4,7 @@
 }
 
 :root {
-  --heights: 40vh;
+  --heights: 50vh;
   --widths: 100%;
 }
 
@@ -18,7 +18,6 @@
   position: relative;
   margin: auto;
   overflow: hidden;
-  border-radius: 25px;
   top: 0;
   left: 0;
   justify-content: center;
@@ -28,6 +27,7 @@
   text-align: center;
 
 }
+
 
 .active {
   display: inline-block;
@@ -41,6 +41,7 @@
   height: var(--heights);
   width: var(--widths);
   position: absolute;
+  top: 0;
 }
 
 .slide-image {
@@ -49,7 +50,50 @@
   position: absolute;
   right: 10px;
   left: -1%;
-  top: -3%;
+}
+
+@media screen and (max-width: 600px) {
+  .slider-container {
+    height: 13vh;
+  }
+
+  .slides {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: 13vh;
+    object-fit: contain;
+    /* scale: 55%;
+     */
+    top: 0%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .slider-container {
+    height: 19vh;
+  }
+
+  .slides {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .slide-image {
+    width: 100%;
+    height: 19vh;
+    object-fit: contain;
+    /* scale: 55%;
+     */
+    top: 0%;
+  }
 }
 
 .prev,
@@ -78,12 +122,12 @@
 }
 
 .next {
-  right: 0;
+  right: 1%;
   border-radius: 5px 5px 5px 5px;
 }
 
 .prev {
-  right: -60;
+  right: 93%;
   border-radius: 5px 5px 5px 5px;
 }
 
@@ -135,12 +179,12 @@
 @media (max-width: 428px) {
   .slide-image {
     /* Update styles for Galaxy Note 20 and Galaxy Note 20 Ultra */
-    --heights: 50vh;
+    /* --heights: 15vh; */
     /* Adjust the height as needed */
-    --widths: 170vh;
+    /* --widths: 170vh; */
     /* Adjust the width as needed */
-    scale: 26%;
-    top: 50%;
+    /*scale: 30%;
+    top: -30%;*/
   }
 }
 
@@ -152,11 +196,12 @@
     /* Adjust the height as needed */
     --widths: 190vh;
     /* Adjust the width as needed */
-    scale: 26%;
-    top: 0%;
+    /*scale: 28%;
+    top: 0%;*/
   }
 }
 
+/*
 @media screen and (max-width: 390px) {
   .slide-image {
     --heights: 45vh;
@@ -211,7 +256,7 @@
 
 @media screen and (max-width: 412px) {
   .slide-image {
-    --heights: 45vh;
+    --heights: 15vh;
     --widths: 45vh;
     scale: 25%;
     top: 3%;
@@ -220,19 +265,68 @@
 
 @media screen and (max-height: 926px) {
   .slide-image {
-    scale: 20%;
-    top: -3%;
+    scale: 23%;
+    margin-top: -45px;
   }
 }
 
 @media only screen and (max-width: 375px) and (max-height: 667px) {
 
   :root {
-    --heights: 60vh;
+    --heights: 15vh;
     --widths: 100%;
   }
   .slide-image {
-    scale: 18%;
+    scale: 20%;
     top: 12%;
   }
 }
+
+@media only screen and (max-width: 360px) and (max-height: 740px) {
+  :root {
+    --heights: 15vh;
+    --widths: 100%;
+  }
+  .slide-image {
+    scale: 20%;
+  }
+}
+
+@media only screen and (max-width: 390px) and (max-height: 844px) {
+  :root {
+    --heights: 15vh;
+    --widths: 100%;
+  }
+  .slide-image {
+    scale: 21%;
+  }
+}
+
+@media only screen and (max-width: 750px) and (max-height: 667px) {
+  :root {
+    --heights: 15vh;
+    --widths: 100%;
+  }
+  .slide-image {
+    scale: 20%;
+  }
+}
+@media only screen and (max-width: 395px) and (max-height: 750px) {
+  :root {
+    --heights: 15vh;
+    --widths: 100%;
+  }
+  .slide-image {
+    scale: 21%;
+  }
+}
+
+@media only screen and (max-width: 395px) and (max-height: 756px) {
+  :root {
+    --heights: 15vh;
+    --widths: 100%;
+  }
+  .slide-image {
+    scale: 21%;
+  }
+}*/

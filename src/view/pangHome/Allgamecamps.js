@@ -48,6 +48,15 @@ const Allgamecamps = () => {
                     slidesToShow: 4,
                     slidesToScroll: 1
                 }
+            },
+
+            {
+                breakpoint: 414,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 12,
+                    slidesToScroll: 6,
+                }
             }
         ]
     };

@@ -1829,11 +1829,11 @@ textarea {
 }
 
 .main-content {
-    min-height: 1920px
+   /* min-height: 1920px;*/
 }
 
 .topbar-menu {
-    background-color: #5105b9;
+    /*background-color: #5105b9;*/
     top: 50px;
 }
 
@@ -1845,7 +1845,7 @@ textarea {
 .section-seo-footer {
     max-width: 1920px;
     margin: 0 auto;
-    width: 95%
+    width: 80%
 }
 
 .dropdown-mainNav .new-app {
@@ -3009,7 +3009,7 @@ textarea {
 }
 
 .product-category {
-    width: 100%;
+    width: 125%;
     white-space: nowrap;
     overflow-x: scroll
 }
@@ -3023,7 +3023,7 @@ textarea {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 8%;
+    padding-bottom: 10%;
     position: relative
 }
 
@@ -3041,7 +3041,7 @@ textarea {
     left: 7%;
     width: 35%;
     font-size: 1vw;
-    line-height: 1.2;
+    line-height: 1.5;
     white-space: normal;
     color: #fff
 }
@@ -3977,7 +3977,7 @@ textarea {
 }
 
 .section-banner {
-    margin: 20px auto;
+    /*margin: 20px auto;*/
     display: flex;
     justify-content: space-between
 }
@@ -4613,7 +4613,7 @@ textarea {
     }
 
     .features-game {
-        top: -220px;
+        /* top: -220px; */
     }
 
     .midbar-providers .list .box {

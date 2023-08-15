@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+::selection {
+    background: #fa4299;
+    color: #fff;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: Mitr;
+    src: url(../../font/Mitr/Mitr-Regular.ttf);
+}
+
+.font {
+    font-family: Mitr;
+}
+
+.progressBar {
+    background-color: #d8d8d8;
+    border-radius: 20px;
+    position: relative;
+    margin: 15px 0;
+    height: 30px;
+    width: 600px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: translate(31%, 0%);
+}
+
+.progressBar-done {
+    background: linear-gradient(to left, #e11fe7, #b200df);
+    box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    transition: 1s ease 0.3s;
+}
+
+/*----------------------------------------------------------------------------*/
+.login-contain {
+    height: 75vh;
+    width: 100%;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapperRegiter {
+    overflow: hidden;
+    max-width: 1800px;
+    max-height: 800px;
+    width: 75%;
+    height: 100%;
+    text-align: center;
+    z-index: 3;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    touch-action: pan-y;
+    touch-action: pan-x;
+    transform: translate(0%, 10%);
+}
+
+.wrapperRegiter .title-text {
+    display: flex;
+    width: 200%;
+}
+
+.wrapperRegiter .title {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapperRegiter .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 5px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+}
+
+.title-textRegiter {
+    font-size: 25px;
+    color: #930bbd;
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.slide-controls label.signup {
+    color: #000;
+    display: none;
+}
+
+.slide-controls .slider-tab {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#signup:checked~.slider-tab {
+    left: 50%;
+}
+
+#signup:checked~label.signup {
+    color: #fff;
+    cursor: default;
+    user-select: none;
+}
+
+#signup:checked~label.login {
+    color: #ffffff;
+}
+
+#login:checked~label.signup {
+    color: #000;
+}
+
+#login:checked~label.login {
+    cursor: default;
+    user-select: none;
+}
+
+.wrapperRegiter .form-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+}
+
+.form-container .form-inner form {
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-inner form .field {
+    height: 60px;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.buttomDown {
+    margin-top: 30px;
+}
+
+.form-inner form .field input {
+    height: 90%;
+    width: 60%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    border-bottom-width: 2px;
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: -webkit-linear-gradient(left, #930bbd, #b31de0, #c244e9, #be3ee6);
+}
+
+.form-inner form .field input:focus {
+    border-color: #000000;
+    /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+.form-inner form .field input::placeholder {
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder {
+    color: #ffffff;
+}
+
+.form-inner form .pass-link {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.form-inner form .signup-link {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+    color: #fa4299;
+    text-decoration: none;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+form .btn {
+    top: -10px;
+    height: 50px;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+form .btn .btn-layer {
+    height: 250%;
+    width: 0%;
+    position: absolute;
+    left: -100%;
+
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+form .btn:hover .btn-layer {
+    left: 0;
+}
+
+form .btn input[type="submit"] {
+    height: 100%;
+    font-size: 25px;
+    width: 62%;
+    z-index: 2;
+    background: -webkit-linear-gradient(right, #133869, #135199, #1e8cf3, #00b1e7);
+}
+
+form .btn input[type="submitri"] {
+    height: 100%;
+    font-size: 25px;
+    width: 62%;
+    z-index: 2;
+    background: -webkit-linear-gradient(right, #133869, #135199, #1e8cf3, #00b1e7);
+}
+
+
+.iconV {
+    position: absolute;
+    transform: translate(40%, 50%);
+    font-size: 30px;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+/*----------------------------------------------*/
+.imgWaycircle {
+    width: 180px;
+    z-index: 1;
+}
+
+.scaltimgcirclesm {
+    text-align: center;
+    z-index: 1;
+    transform: translate(230%, 0%);
+    justify-content: center;
+    align-items: center;
+  
+}
+
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+.imgWaymonter {
+    width: 100px;
+    text-align: center;
+    z-index: 100;
+    touch-action: pan-x;
+    touch-action: pan-x;
+}
+
+.scaltimgmonter {
+    position: relative;
+    width: 250px;
+    text-align: center;
+    transform: translate(-420%, 120%);
+}
+
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+.imgWayrabbit {
+    width: 10px;
+    z-index: 1;
+}
+
+.scaltimgrabbit {
+    position: relative;
+    width: 150px;
+    transform: translate(640%, -120%);
+}
+
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+.imgWaycircleRegiter {
+    width: 0px;
+    z-index: 1;
+
+}
+
+.scaltimgcirclesmRegiter {
+    position: relative;
+    width: 300px;
+    transform: translate(-40%, -80%);
+}
+
+/*----------------------------------------------*/
+
+.scaltimgcircle {
+    text-align: center;
+    z-index: -10;
+    transform: translate(50%, 105%);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    input {
+        font-size: 14px;
+    }
+
+    .scaltimgcartoon7 {
+        position: relative;
+        width: 150px;
+        transform: translate(-500%, 20%);
+    }
+
+    /*----------------------------------------------*/
+    .imgWaycircle {
+        width: 120px;
+        z-index: 1;
+    }
+
+    .scaltimgcirclesm {
+        display: block;
+        scale: 100%;
+        transform: translate(150%, 0%);
+    }
+
+    /*----------------------------------------------*/
+}
+
+@media (max-width: 480px) {
+
+    .progressBar {
+        background-color: #d8d8d8;
+        border-radius: 20px;
+        position: relative;
+        margin: 15px 0;
+        height: 30px;
+        width: 300px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        transform: translate(0%, 0%);
+    }
+
+    .wrapperRegiter {
+        width: 600px;
+        height: 90%;
+        transform: translate(-25%, 10%);
+    }
+
+    .form-inner form .field input {
+        height: 90%;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    /*----------------------------------------------*/
+    .imgWayrabbit {
+        width: 0px;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .scaltimgrabbit {
+        position: relative;
+        width: 150px;
+        transform: translate(200%, -100%);
+    }
+
+    /*----------------------------------------------*/
+
+    /*----------------------------------------------*/
+    .imgWaymonter {
+        width: 0px;
+        z-index: 5;
+
+    }
+
+    .scaltimgmonter {
+        position: relative;
+        width: 100px;
+        transform: translate(-180%, 320%);
+    }
+
+    /*----------------------------------------------*/
+
+    /*----------------------------------------------*/
+    .imgWaycircleRegiter {
+        width: 0px;
+        z-index: 1;
+
+    }
+
+    .scaltimgcirclesmRegiter {
+        position: relative;
+        width: 200px;
+        transform: translate(-80%, -110%);
+    }
+
+    /*----------------------------------------------*/
+
+    .imgWaycartoon {
+        z-index: 2;
+    }
+
+    .scaltimg {
+        width: 500px;
+        text-align: center;
+        transform: translate(-105%, 165%);
+    }
+
+    .slide-controls .slider-tab {
+        display: block;
+    }
+
+    .slide-controls label.signup {
+        display: block;
+    }
+
+    .scaltimgcartoon {
+        position: relative;
+        width: 190px;
+        text-align: center;
+        transform: translate(-10%, -85%);
+    }
+
+    .scaltimgcartoon7 {
+        display: none;
+    }
+
+    .scaltimgcircle {
+        scale: 110%;
+        transform: translate(-150%, 100%);
+    }
+
+    /*----------------------------------------------*/
+    .imgWaycircle {
+        width: 120px;
+        z-index: 1;
+    }
+
+    .scaltimgcirclesm {
+        display: block;
+        scale: 100%;
+        transform: translate(85%, 0%);
+    }
+
+    /*----------------------------------------------*/
+
+    .iconV {
+        position: absolute;
+        transform: translate(40%, 40%);
+        font-size: 30px;
+        color: #ffffff;
+        pointer-events: none;
+    }
+
+    .buttomDown {
+        margin-top: 15px;
+    }
+}

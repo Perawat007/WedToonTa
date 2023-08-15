@@ -8942,7 +8942,8 @@ a.ui-button:active,
 }
 
 .slick-dotted.slick-slider {
-    margin-bottom: 30px
+    margin-bottom: 0 !important;
+    ;
 }
 
 .slick-dots {
@@ -10269,7 +10270,11 @@ a.ui-button:active,
 }
 
 .mgt30 {
-    margin-top: -30px
+    margin-top: -270px
+}
+
+.mgt31 {
+    margin-top: -200px
 }
 
 .mgt35 {

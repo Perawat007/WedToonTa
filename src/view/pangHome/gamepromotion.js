@@ -12,19 +12,19 @@ const Gamepromotion = () => {
                 <div className="product-sub-category mgt45">
                     <div className="list">
                         <div className="vp-title addfont">โปรโมชั่นล่าสุด</div>
-                        <a className="sub-promo" href="/promotions">
+                        <a className="sub-promo">
                             <div className="sub-img"><img
                                 src="https://siam855-pub.s3.ap-southeast-1.amazonaws.com/frontend/asset_web/img/home/promo.png?v=27"
                                 alt="promotions" /></div>
                             <div className="sub-title">
                                 <h5 className='addfont'>โปรโมชั่น</h5>
-                                <span className='addfont'>พบกับโปรโมชั่นมากมายที่ห้ามพลาด!</span>
+                                <span className='addfont'>พบกับโปรโมชั่นมาก มายที่ห้ามพลาด!</span>
                             </div>
                         </a>
                     </div>
                     <div className="list">
                         <div className="vp-title addfont">โปรแกรมวีไอพี</div>
-                        <a className="sub-vip" href="/vip">
+                        <a className="sub-vip">
                             <div className="sub-img"><img
                                 src="https://siam855-pub.s3.ap-southeast-1.amazonaws.com/frontend/asset_web/img/home/vip.png?v=27"
                                 alt="vip" /></div>
@@ -36,7 +36,7 @@ const Gamepromotion = () => {
                     </div>
                     <div className="list">
                         <div className="vp-title addfont">โปรแกรมในเครือ</div>
-                        <a className="sub-aff" href="https://aff.siam855th.co">
+                        <a className="sub-aff">
                             <div className="sub-img"><img
                                 src="https://siam855-pub.s3.ap-southeast-1.amazonaws.com/frontend/asset_web/img/home/aff.png?v=27"
                                 alt="aff" /></div>

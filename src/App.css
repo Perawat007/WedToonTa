@@ -60,13 +60,16 @@
     transform: rotate(360deg);
   }
 }
-
 .Home-container {
-  background-color: #7110af;
-  overflow-x: hidden; 
-  touch-action: pan-y; 
+  background: linear-gradient(to bottom, #b516ff, #4f0a77);
+  /* Additional styles */
+  height: 900vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  touch-action: pan-y;
 }
-
 /*
 @media screen and (min-width: 428px) {
   .Home-container {
